@@ -1,0 +1,340 @@
+/* ==========================================
+   GENERAL
+========================================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar {
+    background-color: #12372a;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: 15px;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #12372a,
+        #1f6f4a
+    );
+
+    color: white;
+
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.btn-primary {
+    background-color: #f4b400;
+    border-color: #f4b400;
+    color: #222;
+    font-weight: bold;
+    padding: 12px 25px;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #d99d00;
+    border-color: #d99d00;
+    color: #222;
+}
+
+.solar-icon {
+    font-size: 150px;
+}
+
+
+/* ==========================================
+   SUMMARY CARDS
+========================================== */
+
+.summary-section {
+    margin-top: -40px;
+    position: relative;
+}
+
+.summary-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.summary-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.summary-card h3 {
+    font-size: 25px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.summary-card p {
+    color: #777;
+    margin: 0;
+}
+
+
+/* ==========================================
+   MODULES
+========================================== */
+
+.modules-section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #1f6f4a;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: #777;
+}
+
+
+/* ==========================================
+   MODULE CARDS
+========================================== */
+
+.module-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.module-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.module-card h4 {
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.module-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.module-link {
+    text-decoration: none;
+    color: #1f6f4a;
+    font-weight: bold;
+}
+
+.module-link:hover {
+    text-decoration: underline;
+}
+
+.add-card {
+    border: 2px dashed #1f6f4a;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    background-color: #12372a;
+    color: white;
+    padding: 30px 0;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+footer small {
+    color: #c9d8d1;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .solar-icon {
+        font-size: 100px;
+        margin-top: 30px;
+    }
+
+    .summary-section {
+        margin-top: 20px;
+    }
+    /* ==========================================
+   INNER PAGES
+========================================== */
+
+.page-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.page-header {
+    margin-bottom: 35px;
+}
+
+.page-header h1 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.page-header p:not(.section-label) {
+    color: #777;
+}
+
+
+/* ==========================================
+   TABLE CARD
+========================================== */
+
+.table-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #12372a;
+    color: white;
+    padding: 14px;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 14px;
+    vertical-align: middle;
+}
+
+
+/* ==========================================
+   STATUS
+========================================== */
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #e8f5ee;
+    color: #1f6f4a;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-card {
+    background-color: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: #1f6f4a;
+    box-shadow: 0 0 0 0.2rem rgba(31, 111, 74, 0.15);
+}
+
+}
