@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solar Plant Management System</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVBAR
+========================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            ☀ Solar Plant Management System
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/plants">
+                        Plants
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/generation">
+                        Generation
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/alerts">
+                        Alerts
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================================
+     HERO SECTION
+========================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <h1>
+                    Solar Plant
+                    <span>Management System</span>
+                </h1>
+
+                <p>
+                    Monitor and manage solar plant operations,
+                    power generation, equipment, maintenance,
+                    weather conditions and alerts.
+                </p>
+
+                <a href="#modules" class="btn btn-primary">
+                    Explore System
+                </a>
+
+            </div>
+
+
+            <div class="col-lg-4 text-center">
+
+                <div class="solar-icon">
+                    ☀
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     DASHBOARD SUMMARY
+========================================== -->
+
+<section class="container summary-section">
+
+    <div class="row g-4">
+
+
+        <div class="col-md-3">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    ☀
+                </div>
+
+                <h3>3</h3>
+
+                <p>Solar Plants</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    ⚡
+                </div>
+
+                <h3>22.5 MW</h3>
+
+                <p>Total Capacity</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    🔧
+                </div>
+
+                <h3>4</h3>
+
+                <p>Maintenance Records</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-md-3">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+                    ⚠
+                </div>
+
+                <h3>Open</h3>
+
+                <p>System Alerts</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     MODULES
+========================================== -->
+
+<section id="modules" class="container modules-section">
+
+    <div class="section-heading">
+
+        <p class="section-label">
+            MANAGEMENT MODULES
+        </p>
+
+        <h2>
+            System Modules
+        </h2>
+
+        <p>
+            Access and manage different aspects of the
+            solar plant management system.
+        </p>
+
+    </div>
+
+
+
+    <div class="row g-4">
+
+
+        <!-- ==========================================
+             SOLAR PLANTS
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    ☀
+                </div>
+
+                <h4>
+                    Solar Plants
+                </h4>
+
+                <p>
+                    View plant details, location,
+                    capacity and commissioning information.
+                </p>
+
+                <a href="/plants" class="module-link">
+                    View Plants →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             SOLAR PANELS
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    ▦
+                </div>
+
+                <h4>
+                    Solar Panels
+                </h4>
+
+                <p>
+                    Monitor panel manufacturer, model,
+                    power rating and operating status.
+                </p>
+
+                <a href="/panels" class="module-link">
+                    View Panels →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             INVERTERS
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    ⚡
+                </div>
+
+                <h4>
+                    Inverters
+                </h4>
+
+                <p>
+                    Monitor inverter capacity,
+                    efficiency and equipment status.
+                </p>
+
+                <a href="/inverters" class="module-link">
+                    View Inverters →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             PERFORMANCE
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    📊
+                </div>
+
+                <h4>
+                    Plant Performance
+                </h4>
+
+                <p>
+                    View total energy generation
+                    and average plant efficiency.
+                </p>
+
+                <a href="/performance" class="module-link">
+                    View Performance →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             WEATHER
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    🌤
+                </div>
+
+                <h4>
+                    Weather Data
+                </h4>
+
+                <p>
+                    Monitor temperature, irradiance
+                    and humidity conditions.
+                </p>
+
+                <a href="/weather" class="module-link">
+                    View Weather →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             POWER GENERATION
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    🔋
+                </div>
+
+                <h4>
+                    Power Generation
+                </h4>
+
+                <p>
+                    Monitor energy generation,
+                    peak power and efficiency.
+                </p>
+
+                <a href="/generation" class="module-link">
+                    View Generation →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             MAINTENANCE
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    🔧
+                </div>
+
+                <h4>
+                    Maintenance
+                </h4>
+
+                <p>
+                    Manage equipment maintenance
+                    records and employee assignments.
+                </p>
+
+                <a href="/maintenance" class="module-link">
+                    View Maintenance →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             FAULT LOGS
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    🛠
+                </div>
+
+                <h4>
+                    Fault Logs
+                </h4>
+
+                <p>
+                    Track equipment faults,
+                    severity and resolution status.
+                </p>
+
+                <a href="/faults" class="module-link">
+                    View Faults →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             ALERTS
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    🔔
+                </div>
+
+                <h4>
+                    Alerts
+                </h4>
+
+                <p>
+                    Monitor plant alerts and
+                    equipment-related notifications.
+                </p>
+
+                <a href="/alerts" class="module-link">
+                    View Alerts →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             INVENTORY
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    📦
+                </div>
+
+                <h4>
+                    Inventory
+                </h4>
+
+                <p>
+                    Manage equipment, spare parts,
+                    quantities and suppliers.
+                </p>
+
+                <a href="/inventory" class="module-link">
+                    View Inventory →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             EMPLOYEES
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    👷
+                </div>
+
+                <h4>
+                    Employees
+                </h4>
+
+                <p>
+                    View employee information,
+                    designations and skills.
+                </p>
+
+                <a href="/employees" class="module-link">
+                    View Employees →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             ADD SOLAR PLANT
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card add-card">
+
+                <div class="module-icon">
+                    +
+                </div>
+
+                <h4>
+                    Add Solar Plant
+                </h4>
+
+                <p>
+                    Add a new solar plant
+                    to the management system.
+                </p>
+
+                <a href="/add-plant" class="module-link">
+                    Add Plant →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             ADD MAINTENANCE
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card add-card">
+
+                <div class="module-icon">
+                    +
+                </div>
+
+                <h4>
+                    Add Maintenance
+                </h4>
+
+                <p>
+                    Add a new equipment
+                    maintenance record.
+                </p>
+
+                <a href="/add-maintenance" class="module-link">
+                    Add Maintenance →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             ADD FAULT
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card add-card">
+
+                <div class="module-icon">
+                    +
+                </div>
+
+                <h4>
+                    Add Fault Log
+                </h4>
+
+                <p>
+                    Record a new equipment fault
+                    and its severity.
+                </p>
+
+                <a href="/add-fault" class="module-link">
+                    Add Fault →
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             ADD INVENTORY
+        ========================================== -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="module-card add-card">
+
+                <div class="module-icon">
+                    +
+                </div>
+
+                <h4>
+                    Add Inventory
+                </h4>
+
+                <p>
+                    Add a new inventory item,
+                    quantity and supplier.
+                </p>
+
+                <a href="/add-inventory" class="module-link">
+                    Add Inventory →
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="container text-center">
+
+        <p>
+            Solar Plant Management System
+        </p>
+
+        <small>
+            MySQL • Python • Flask • HTML • CSS • Bootstrap
+        </small>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
+```
